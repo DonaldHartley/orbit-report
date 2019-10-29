@@ -1,2 +1,5 @@
-<h1>{{title}} Im a Bot Beep Boop {{sourceList[0].name}}</h1>
-<app-orbit-list></app-orbit-list>
+<app-orbit-list [satellites]="displayList"></app-orbit-list>
+<div class="search-form">
+  <input (keyup.enter)="search(searchTerm.value)" #searchterm type='text'>
+  <button (click)="search(searchTerm.value)"></button>
+</div>
